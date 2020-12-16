@@ -1,0 +1,41 @@
+header{
+    @include flex-columm;
+        align-items: center;
+        margin-top: 15px;
+        background-color: $ultra-light-grey;
+        margin-top: -10px;
+
+    .logo{
+        width: 40%;
+        margin-top: 20px;
+    }
+}
+#locate{
+    @include flex-center;
+        width: 100%;
+	    background-color: $light-grey;
+	    height: 50px;
+	    margin-top: 14px;
+
+    &-icon{
+	    width:3%;
+	    padding-left: 40px;
+    }
+
+    form{
+        padding-left: 10px;
+        width: 48%;
+    }
+    input{
+	    border: none;
+        height: 16px;
+	    background-color: $light-grey;
+	    padding-left: 5px;
+    }
+
+    input::placeholder{
+	    color: black;
+        opacity: 1;
+    }
+}
+

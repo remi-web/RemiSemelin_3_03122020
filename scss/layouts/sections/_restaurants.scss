@@ -1,0 +1,61 @@
+
+
+
+#restaurant{	
+    background-color: $ultra-light-grey;
+    padding-top: 30px;
+    padding-bottom: 10px;
+        h3{
+            margin-left: 20px;
+            @include police ($police-bold);
+        }
+}
+a
+{
+    text-decoration: none;
+
+        .cards{
+            @include cards;
+                p, h4{
+                margin: 0;
+                text-decoration: none;
+                color: black;
+                @include police ($police);
+                font-size: 0.9em;
+                padding-left: 10px;
+                margin-top: 5px}  
+                h4{
+                    @include police ($police-bold);
+                    
+                }
+
+                
+            &-icon{
+                    @include like;
+                }
+            &-img{
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+             }
+            &-new{
+                @include new;
+                    p{
+                        padding-left: 0%;
+                        margin: auto;
+                        color:#008869;
+                    }
+            
+
+            }
+            }
+                   
+            }
+//.svg{
+    //fill: #008869;
+    //width: 5%;
+//}
+    
+

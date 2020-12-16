@@ -1,0 +1,24 @@
+footer{
+    background-color: $background;
+    padding: 20px;
+    .logo{
+        width: 30%;
+        color: white;
+    }
+    .icon{
+        width: 5%;
+    }
+    a{
+        text-decoration: dashed;
+        color: white;
+        @include police ($police);
+        font-size: 0.8em;
+        padding-left: 4px;
+    }
+    nav{
+        ul{
+            list-style: none;
+            padding-left: 0;
+        }
+    }
+}
