@@ -1,0 +1,39 @@
+h4{
+    @include police ($police);
+    font-size:0.8em;
+}
+.card{
+   @include flex-columm;
+   align-items: center;
+   justify-content: space-around;
+
+    &-list{
+        @include card-list;
+        
+        &-txt{
+            @include police ($police);
+            @include card-list-txt;
+            }
+                h5{
+                    font-size: 0.7em;
+                    margin: 0;
+
+                }
+                p{
+                    font-size: 0.6em;
+                    margin: 0;
+                    margin-top: 1%;
+                    padding-bottom: 3%;
+                    color: grey;
+                }
+        
+                .price{
+                    @include police($police);
+                    position: absolute;
+                    left:90%;
+                    top: 55%;
+                    color: black;
+                }
+            }     
+}
+

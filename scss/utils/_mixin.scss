@@ -1,3 +1,16 @@
+
+
+@mixin logo{
+    width: 40%;
+    margin-top: 20px;
+}
+
+
+@mixin txt-button-pink{
+    @include police ($police);
+    font-size: 0.8em;
+}
+
 @mixin button-pink {
     border-radius: 30px;
     color: white;
@@ -9,6 +22,7 @@
     height: 40px;
     font-family: roboto, sans-serif;
     box-shadow: 2px 2px 10px grey;
+
     
 }
 
@@ -22,8 +36,8 @@
     margin-bottom: 23px;
     box-shadow: 2px 4px 8px #e7e7e7;
     align-items: center;
-    
 }
+
 @mixin step-bloc-hover{
     box-shadow: 6px 8px 12px #cccbcb;
     
@@ -82,7 +96,7 @@ $icon: (hover:icon, active:icon);
     bottom:10%;
     color: white;
 }
-//--------------------sticker "Nouveau"
+//--------------------sticker "Nouveau"-------
 @mixin new {
     background-color: #82e5d0;
     position: absolute;
@@ -92,8 +106,26 @@ $icon: (hover:icon, active:icon);
     text-align: center;
     padding:1%;
     padding-left: 4%;
-    padding-right: 4%;
-    
-  
+    padding-right: 4%;  
+}
 
+
+@mixin card-list{ 
+    width: 90%;
+    box-shadow: 2px 4px 8px #e7e7e7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+    position: relative;
+    margin-right: 0;
+    margin-bottom: 3%;
+}
+
+@mixin card-list-txt{
+    margin-left: 10px;
+            margin-bottom: 0%;
+            padding-top: 3%;
+            
 }

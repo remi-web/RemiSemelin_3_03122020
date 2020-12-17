@@ -13,8 +13,7 @@ footer{
         color: white;
         @include police ($police);
         font-size: 0.8em;
-        padding-left: 4px;
-    }
+        }
     nav{
         ul{
             list-style: none;
