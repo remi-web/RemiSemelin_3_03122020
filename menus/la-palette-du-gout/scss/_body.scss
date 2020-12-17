@@ -5,6 +5,8 @@ body{
         background-color: $ultra-light-grey;
         padding-top: 30px;
         padding-bottom: 40px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         #baner{
             @include flex-center;
             justify-content: space-around;

@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./scss/main.scss:css/style.css",
-    "sass1": "sass --watch ./menus/la-palette-du-gout/scss/main.scss:menus/la-palette-du-gout/css/style.css"
+    "sass1": "sass --watch ./menus/la-palette-du-gout/scss/main.scss:menus/la-palette-du-gout/css/style.css",
+    "sass2": "sass --watch ./menus/a-la-francaise/main.scss:menus/a-la-francaise/css/style.css"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/remi-web/RemiSemelin_3_03122020.git"
