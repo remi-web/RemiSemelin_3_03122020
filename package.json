@@ -6,12 +6,8 @@
   "scripts": {
     "sass": "sass --watch ./scss/main.scss:css/style.css",
     "sass1": "sass --watch ./menus/la-palette-du-gout/scss/main.scss:menus/la-palette-du-gout/css/style.css",
-    "sass2": "sass --watch ./menus/a-la-francaise/main.scss:menus/a-la-francaise/css/style.css",
-    "sass-note": "sass --watch ./menus/la-note-enchantee/main.scss:menus/la-note-enchantee/css/style.css",
-    "sass-delice": "sass --watch ./menus/le-delice-des-sens/main.scss:menus/le-delice-des-sens/css/style.css"
-
+    
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/remi-web/RemiSemelin_3_03122020.git"

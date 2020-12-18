@@ -8,6 +8,7 @@
 	    text-align: center;
 	    margin-bottom: 0;
         @include police($police-bold);
+        font-size: 1.3em;
     }
 
 
@@ -15,14 +16,14 @@
 	    width: 90%;
 	    text-align: center;
         @include police ($police);
-        font-weight: initial;
-    color: grey;}
+        //color: grey;}
+    }
 
     &-explor{
         @include button-pink;
         p{
             font-size: 0.8em;
-            @include police ($police)
+            @include police ($police-bold);
         }
     }
 }

@@ -1,6 +1,13 @@
 h4{
     @include police ($police);
     font-size:0.8em;
+    
+}
+.underline{
+    border: solid;
+    border-width: 2px;
+    border-color: $tertiaire;
+    width: 8%;
 }
 .card{
    @include flex-columm;
@@ -12,6 +19,7 @@ h4{
         
         &-txt{
             @include police ($police);
+            font-size: 1.5em;
             @include card-list-txt;
             }
                 h5{
@@ -28,11 +36,12 @@ h4{
                 }
         
                 .price{
-                    @include police($police);
+                    @include police($police-bold);
+                    font-size: 1.08em;
                     position: absolute;
-                    left:90%;
+                    left:88%;
                     top: 55%;
-                    color: black;
+                    color: $background;
                 }
             }     
 }

@@ -3,16 +3,17 @@ body{
     margin-right: 0;
     main{
         background-color: $ultra-light-grey;
-        padding-top: 30px;
         padding-bottom: 40px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        z-index: 1;
         #baner{
             @include flex-center;
             justify-content: space-around;
         
             h3{
                 @include police ($police-bis);
+                font-size:1.7em;
             }
             #like-icon{
                 width: 6%;

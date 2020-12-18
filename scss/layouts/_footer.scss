@@ -1,19 +1,25 @@
 footer{
     background-color: $background;
     padding: 20px;
+    
     .logo{
         width: 30%;
         color: white;
     }
+
     .icon{
         width: 5%;
     }
+
     a{
         text-decoration: dashed;
         color: white;
-        @include police ($police);
+        font-family: roboto;
+        font-weight: normal;
+        font-style: normal;
         font-size: 0.8em;
-        }
+    }
+
     nav{
         ul{
             list-style: none;

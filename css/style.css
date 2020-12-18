@@ -1,18 +1,18 @@
 @font-face {
-  font-famly: roboto;
+  font-family: roboto;
   src: url("polices/roboto/Roboto-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-famly: roboto;
+  font-family: roboto;
   src: url("polices/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-famly: shrikhand;
-  src: url("polices/shrikhand/shrikhand-regular.ttf") format("truetype");
+  font-family: Shrikhand;
+  src: url("polices/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -45,13 +45,21 @@ header .logo {
   margin-top: 20px;
 }
 
+.header-logo {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  box-shadow: 0px 1px 4px grey;
+  z-index: 1;
+}
+
 #locate {
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: #eaeaea;
   height: 50px;
-  margin-top: 14px;
 }
 #locate-icon {
   width: 3%;
@@ -85,6 +93,7 @@ header .logo {
   font-family: roboto;
   font-weight: bold;
   font-style: normal;
+  font-size: 1.3em;
 }
 #description-p {
   width: 90%;
@@ -92,13 +101,12 @@ header .logo {
   font-family: roboto;
   font-weight: normal;
   font-style: normal;
-  font-weight: initial;
-  color: grey;
 }
 #description-explor {
   border-radius: 30px;
   color: white;
-  background-color: #FF79DA;
+  background: #FF79DA;
+  background: linear-gradient(180deg, #FF79DA 35%, #9356DC 100%);
   width: 55%;
   text-align: center;
   display: flex;
@@ -110,7 +118,7 @@ header .logo {
 #description-explor p {
   font-size: 0.8em;
   font-family: roboto;
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -122,6 +130,7 @@ header .logo {
   font-family: roboto;
   font-weight: bold;
   font-style: normal;
+  font-size: 1.3em;
 }
 #fonction a {
   text-decoration: dashed;
@@ -152,6 +161,9 @@ header .logo {
   justify-content: center;
   font-size: 0.8em;
   align-items: center;
+  font-family: roboto;
+  font-weight: normal;
+  font-style: normal;
 }
 .step-icon {
   max-width: 5%;
@@ -192,6 +204,7 @@ header .logo {
   font-family: roboto;
   font-weight: bold;
   font-style: normal;
+  font-size: 1.3em;
 }
 
 a {
@@ -215,7 +228,7 @@ a .cards p, a .cards h4 {
   font-weight: normal;
   font-style: normal;
   font-size: 0.9em;
-  padding-left: 10px;
+  padding-left: 15px;
   margin-top: 5px;
 }
 a .cards h4 {

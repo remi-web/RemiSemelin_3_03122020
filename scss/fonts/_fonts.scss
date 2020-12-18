@@ -1,29 +1,28 @@
 $police:roboto; $weigth:normal; $style:normal; $file:Roboto-Light;
-$police-bold:Roboto-bold; $bold-weigth:bold; $bold-style:normal; $bold-file: Roboto-Bold;
-$police-bis:shrikhand; $bis-weigth:bold; $bis-style:normal; $bis-file:shrikhand-regular;
+$police-bold: Roboto-bold; $bold-weigth:bold; $bold-style:normal; $bold-file: Roboto-Bold;
+$police-bis: Shrikhand; $bis-weigth:bold; $bis-style:normal; $bis-file:Shrikhand-Regular;
 
 $font-face:($police:(file:$file, family:$police, weigth:$weigth, style:$style),
             $police-bold:(file:$bold-file, family:$police, weigth:$bold-weigth, style:$bold-style),
             $police-bis:(file:$bis-file, family:$police-bis, weigth:$bis-weigth, style:$bis-style));
 
 @each $key, $value in $font-face{
-        @font-face {
+    @font-face {
         $palette:map-get($font-face, #{$key});
-        font-famly:map-get($palette, family );
+        font-family:map-get($palette, family );
         $file:map-get($palette,file);
         $file1:map-get($palette, family);
         src: url('polices/#{$file1}/#{$file}.ttf') format('truetype');
         font-weight: map-get($palette, weigth);
-        font-style: map-get($palette,  style)}}
+        font-style: map-get($palette,  style)
+    }
+}
 
-    
-    
 @mixin police ($name){
     $palette:map-get($font-face, $name );
     font-family: map-get($palette, family);
     font-weight: map-get($palette, weigth);
     font-style: map-get($palette, style );
-
 }
 
     

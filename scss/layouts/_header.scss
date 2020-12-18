@@ -10,12 +10,20 @@ header{
         margin-top: 20px;
     }
 }
+.header-logo{
+    background-color: white;
+    @include flex-center;
+    padding-bottom: 10px;
+    box-shadow: 0px 1px 4px grey;
+    z-index: 1;
+    
+}
 #locate{
     @include flex-center;
-        width: 100%;
-	    background-color: $light-grey;
-	    height: 50px;
-	    margin-top: 14px;
+    width: 100%;
+	background-color: $light-grey;
+    height: 50px;
+
 
     &-icon{
 	    width:3%;
