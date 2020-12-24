@@ -131,3 +131,21 @@ $icon: (hover:icon, active:icon);
     padding-top: 3%;
             
 }
+@mixin check {
+    @include flex-columm;
+    justify-content: right;
+    align-items: center;
+    position: absolute;
+    left: 80%;
+    top: 1%;
+    width: 20%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+@mixin check-icon {
+    position: absolute;
+    left: 110%;
+    top: 30%;
+    width: 30%;
+}

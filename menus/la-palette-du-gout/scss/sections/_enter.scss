@@ -13,14 +13,72 @@ h4{
    @include flex-columm;
    align-items: center;
    justify-content: space-around;
+   animation: fadein 2s;
+   animation-fill-mode: forwards;
+
+   @keyframes fadein {
+       from{
+           opacity: 0;
+       }
+       to{
+           opacity: 1;
+       }
+       
+   }
 
     &-list{
         @include card-list;
+        overflow: hidden;
+
+        &:hover>.card-list-txt p{
+            transform: scaleX(0.8);
+        }
         
+
+        &:hover::before{
+            transform: scaleX(1);
+            }
+           
+        &:hover::after{
+            transform:translateX(-35px);
+            animation-name: check-icon;
+            animation-duration: 600ms;
+            animation-delay: 150ms;
+            }
+       
+        &:hover .price{
+            transform: translateX(-60px)
+            }
+        
+        &::before{
+            @include check;
+            content: "";
+            background-color: $tertiaire;
+            transform: scaleX(0);
+            transition: transform 300ms ease-in-out 120ms;
+            transform-origin: right;
+            }
+
+        &::after{
+            content: url("../../../images/icon/check-icon.svg");
+            position: absolute;
+            left: 100%;
+            top: 30%;
+            transform: translateX(0px); 
+            transition: transform 300ms ease-in-out 150ms ;
+            }
+           
+            @keyframes check-icon {
+                0% {transform:  rotate(0deg);}
+                50%{transform: translateX(-35px) rotate(0deg);}
+                100% {transform: translateX(-35px) rotate(720deg);}
+            }
+
         &-txt{
             @include police ($police);
             font-size: 1.5em;
             @include card-list-txt;
+            
             }
                 h5{
                     font-size: 0.7em;
@@ -28,21 +86,32 @@ h4{
 
                 }
                 p{
-                    font-size: 0.6em;
+                    font-size: 0.5em;
                     margin: 0;
                     margin-top: 1%;
                     padding-bottom: 3%;
                     color: grey;
+                    width: 90%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    transform: scaleX(1);
+                    transform-origin: left;
+                    transition: transform 300ms ease-in-out;
+                }
+            }
+        
+        .price{
+                @include police($police-bold);
+                font-size: 1.08em;
+                position: absolute;
+                left:88%;
+                top: 55%;
+                color: $background;
+                transform: translateX(0px);
+                transition: 300ms ease-in-out 100ms;
+                //transform-origin: left;
                 }
         
-                .price{
-                    @include police($police-bold);
-                    font-size: 1.08em;
-                    position: absolute;
-                    left:88%;
-                    top: 55%;
-                    color: $background;
-                }
-            }     
 }
 
