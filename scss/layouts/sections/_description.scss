@@ -10,6 +10,7 @@
         @include police($police-bold);
         font-size: 1.3em;
     }
+    
 
 
     &-p{
@@ -24,6 +25,50 @@
         p{
             font-size: 0.8em;
             @include police ($police-bold);
+        }
+    }
+
+   
+    h3{
+        opacity: 0;
+        animation: fadein 300ms;
+        animation-delay: 200ms;
+        animation-fill-mode: forwards;
+    }
+    p:nth-child(2n){
+        opacity: 0;
+        animation: fadein 300ms;
+        animation-delay: 800ms;
+        animation-fill-mode: forwards;
+    }
+    &-explor{
+        opacity: 0;
+        animation: fadein 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+    
+}
+
+@media (min-width:600px){
+
+    #description{
+
+        h3,p:nth-child(2n){
+            width: 100%;
+        }
+        h3{
+            font-size: 2em;
+        }
+        p:nth-child(2n){
+            font-size: 1.5em;
+        }
+        &-explor{
+            width: 30%;
+
+            p{
+                font-size: 1.2em;
+            }
         }
     }
 }

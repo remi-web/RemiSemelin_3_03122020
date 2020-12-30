@@ -6,7 +6,7 @@ body{
         padding-bottom: 40px;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
-        z-index: 1;
+        //z-index: 1;
         #baner{
             @include flex-center;
             justify-content: space-around;
@@ -20,8 +20,9 @@ body{
                 color: white;
             }
             
+        }
     }
-}}
+}
 h4{
     margin-left: 5%;
 }
@@ -35,5 +36,5 @@ a{
         p{
             @include txt-button-pink;
         }
-}
+    }
 }

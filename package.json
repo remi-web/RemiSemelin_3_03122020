@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./scss/main.scss:css/style.css",
-    "sass1": "sass --watch ./menus/la-palette-du-gout/scss/main.scss:menus/la-palette-du-gout/css/style.css"
-    
+    "sass1": "sass --watch ./menus/la-palette-du-gout/scss/main.scss:menus/la-palette-du-gout/css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,11 @@
   "author": "remi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/remi-web/RemiSemelin_3_03122020/issues"
+    "url": "https://github.com/remi-web/RemiSemelin_3_03122020/issues",
+    "browserlist": "last 4 version"
   },
-  "homepage": "https://github.com/remi-web/RemiSemelin_3_03122020#readme"
+  "homepage": "https://github.com/remi-web/RemiSemelin_3_03122020#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.1.0"
+  }
 }

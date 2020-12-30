@@ -7,22 +7,20 @@
 
 
 @mixin txt-button-pink{
-    @include police ($police);
-    font-size: 0.8em;
-
+    @include police ($police-bold);
 }
 
 @mixin button-pink {
     border-radius: 30px;
     color: white;
     background: $secondaire;
-    background: linear-gradient(180deg,$secondaire 35%, $primaire 100%);
+    background: linear-gradient(170deg,$secondaire 1%, $primaire 180%);
     width: 55%;
-    text-align: center;
+    align-items: center;
     display: flex;
     justify-content: center;
     height: 40px;
-    font-family: roboto, sans-serif;
+    //font-family: roboto, sans-serif;
     box-shadow: 2px 2px 10px grey;
 
     
@@ -80,23 +78,13 @@
 }
 /*-------------like-icon-----------*/
 
-$like:(hover:(color:$secondaire),
-        active:(color:$primaire));
-@mixin like-icon ($state){
-    $palette:map-get($like, $state);
-    background-color: map-get($palette, color );
-}
-$icon: (hover:icon, active:icon);
-@each $key, $value in $icon{
-.cards-#{$value}:#{$key} {@include like-icon($key)}
-}
+
 
 @mixin like {
-    width: 6%;
     position: absolute;
     left: 85%;
     bottom:10%;
-    color: white;
+
 }
 //--------------------sticker "Nouveau"-------
 @mixin new {
@@ -137,7 +125,7 @@ $icon: (hover:icon, active:icon);
     align-items: center;
     position: absolute;
     left: 80%;
-    top: 1%;
+    //top: 1%;
     width: 20%;
     height: 100%;
     border-top-right-radius: 10px;
@@ -149,3 +137,4 @@ $icon: (hover:icon, active:icon);
     top: 30%;
     width: 30%;
 }
+

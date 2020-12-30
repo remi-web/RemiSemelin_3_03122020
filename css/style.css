@@ -24,14 +24,6 @@ body {
 /*------------step-bloc--------*/
 /*-----------cards-------------*/
 /*-------------like-icon-----------*/
-.cards-icon:hover {
-  background-color: #FF79DA;
-}
-
-.cards-icon:active {
-  background-color: #9356DC;
-}
-
 header {
   display: flex;
   flex-direction: column;
@@ -41,8 +33,9 @@ header {
   margin-top: -10px;
 }
 header .logo {
-  width: 40%;
-  margin-top: 20px;
+  font-family: Shrikhand;
+  font-weight: bold;
+  font-style: normal;
 }
 
 .header-logo {
@@ -52,6 +45,7 @@ header .logo {
   padding-bottom: 10px;
   box-shadow: 0px 1px 4px grey;
   z-index: 1;
+  width: 100%;
 }
 
 #locate {
@@ -67,7 +61,6 @@ header .logo {
 }
 #locate form {
   padding-left: 10px;
-  width: 48%;
 }
 #locate input {
   border: none;
@@ -80,6 +73,15 @@ header .logo {
   opacity: 1;
 }
 
+@media (min-width: 600px) {
+  .header-logo {
+    justify-content: left;
+    padding-left: 40px;
+  }
+  .header .logo h1 {
+    font-size: 4em;
+  }
+}
 #description {
   display: flex;
   flex-direction: column;
@@ -106,13 +108,12 @@ header .logo {
   border-radius: 30px;
   color: white;
   background: #FF79DA;
-  background: linear-gradient(180deg, #FF79DA 35%, #9356DC 100%);
+  background: linear-gradient(170deg, #FF79DA 1%, #9356DC 180%);
   width: 55%;
-  text-align: center;
+  align-items: center;
   display: flex;
   justify-content: center;
   height: 40px;
-  font-family: roboto, sans-serif;
   box-shadow: 2px 2px 10px grey;
 }
 #description-explor p {
@@ -121,7 +122,42 @@ header .logo {
   font-weight: bold;
   font-style: normal;
 }
+#description h3 {
+  opacity: 0;
+  animation: fadein 300ms;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+}
+#description p:nth-child(2n) {
+  opacity: 0;
+  animation: fadein 300ms;
+  animation-delay: 800ms;
+  animation-fill-mode: forwards;
+}
+#description-explor {
+  opacity: 0;
+  animation: fadein 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
 
+@media (min-width: 600px) {
+  #description h3, #description p:nth-child(2n) {
+    width: 100%;
+  }
+  #description h3 {
+    font-size: 2em;
+  }
+  #description p:nth-child(2n) {
+    font-size: 1.5em;
+  }
+  #description-explor {
+    width: 30%;
+  }
+  #description-explor p {
+    font-size: 1.2em;
+  }
+}
 #fonction {
   padding-bottom: 30px;
 }
@@ -131,6 +167,10 @@ header .logo {
   font-weight: bold;
   font-style: normal;
   font-size: 1.3em;
+  opacity: 0;
+  animation: fadein 300ms;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
 }
 #fonction a {
   text-decoration: dashed;
@@ -193,7 +233,52 @@ header .logo {
   font-style: normal;
   font-size: 0.9em;
 }
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+.step:nth-child(2n) {
+  opacity: 0;
+  animation: fadein 500ms;
+  animation-delay: 800ms;
+  animation-fill-mode: forwards;
+}
+.step:nth-child(3n) {
+  opacity: 0;
+  animation: fadein 500ms;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+.step:nth-child(4n) {
+  opacity: 0;
+  animation: fadein 500ms;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
 
+@media (min-width: 600px) {
+  #fonction {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0px;
+    margin-top: 60px;
+    position: relative;
+  }
+  #fonction h3 {
+    position: absolute;
+    left: 0%;
+    bottom: 90%;
+  }
+  #fonction .step {
+    width: 50%;
+  }
+}
 #restaurant {
   background-color: #f6f6f6;
   padding-top: 30px;
@@ -237,11 +322,10 @@ a .cards h4 {
   font-style: normal;
 }
 a .cards-icon {
-  width: 6%;
   position: absolute;
   left: 85%;
   bottom: 10%;
-  color: white;
+  width: 6%;
 }
 a .cards-img {
   width: 100%;
@@ -268,7 +352,42 @@ a .cards-new p {
   margin: auto;
   color: #008869;
 }
+a .cards .like-icon::after {
+  content: url("../images/icon/like/like-icon-color.svg");
+  position: absolute;
+  left: 85%;
+  bottom: 10%;
+  bottom: 8%;
+  transform: scale(0);
+  transition: transform 1ms ease-in-out;
+}
+a .cards .like-icon:hover::after {
+  transform: scale(1);
+  transition: transform;
+  transition-duration: 1s;
+}
 
+@media (min-width: 600px) {
+  #restaurant {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 60px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  #restaurant h3 {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+  }
+  #restaurant .cards {
+    width: 100%;
+  }
+  #restaurant a {
+    width: 40%;
+  }
+}
 footer {
   background-color: #353535;
   padding: 20px;

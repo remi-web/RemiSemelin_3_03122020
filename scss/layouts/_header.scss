@@ -6,8 +6,7 @@ header{
         margin-top: -10px;
 
     .logo{
-        width: 40%;
-        margin-top: 20px;
+        @include police ($police-bis);
     }
 }
 .header-logo{
@@ -16,14 +15,14 @@ header{
     padding-bottom: 10px;
     box-shadow: 0px 1px 4px grey;
     z-index: 1;
-    
+    width: 100%;
 }
+
 #locate{
     @include flex-center;
     width: 100%;
 	background-color: $light-grey;
     height: 50px;
-
 
     &-icon{
 	    width:3%;
@@ -32,7 +31,7 @@ header{
 
     form{
         padding-left: 10px;
-        width: 48%;
+        //width: 48%;
     }
     input{
 	    border: none;
@@ -47,3 +46,16 @@ header{
     }
 }
 
+@media (min-width:600px){
+    .header{
+        &-logo{
+            justify-content: left;
+            padding-left: 40px;
+        }
+        .logo{
+            h1{
+            font-size: 4em;
+            }
+        }
+    } 
+}

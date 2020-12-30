@@ -2,6 +2,7 @@
     background-color: $ultra-light-grey;
     padding-top: 30px;
     padding-bottom: 10px;
+
         h3{
             margin-left: 20px;
             @include police ($police-bold);
@@ -14,30 +15,31 @@ a{
 
         .cards{
             @include cards;
-                p, h4{
-                margin: 0;
-                text-decoration: none;
-                color: black;
-                @include police ($police);
-                font-size: 0.9em;
-                padding-left: 15px;
-                margin-top: 5px}  
+            p, h4{
+            margin: 0;
+            text-decoration: none;
+            color: black;
+            @include police ($police);
+            font-size: 0.9em;
+            padding-left: 15px;
+            margin-top: 5px}
+
                 h4{
                     @include police ($police-bold);
-                    
                 }
-
-                
             &-icon{
                     @include like;
-                }
+                    width: 6%;
+            }
+
             &-img{
                 width: 100%;
                 height: 150px;
                 object-fit: cover;
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;
-             }
+            }
+           
             &-new{
                 @include new;
                     p{
@@ -45,15 +47,48 @@ a{
                         margin: auto;
                         color:#008869;
                     }
-            
+            }
 
+            .like-icon{
+                &::after{
+                    content: url("../images/icon/like/like-icon-color.svg");
+                    @include like;
+                    bottom: 8%;
+                    transform: scale(0);
+                    transition: transform 1ms ease-in-out;
+                }
+
+                &:hover::after{
+                    transform: scale(1);
+                    transition: transform;
+                    transition-duration: 1s;
+                }
             }
-            }
-                   
-            }
-//.svg{
-    //fill: #008869;
-    //width: 5%;
-//}
-    
+        }
+
+}               
+
+@media (min-width:600px){
+    #restaurant{
+        @include flex-center;
+        position: relative;
+        padding-top: 60px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        h3{
+            position: absolute;
+            left: 0%;
+            top: 0%;
+        }
+        .cards{
+            width: 100%;
+
+        }
+        
+        a{
+            width: 40%;
+        }
+    }
+}
 
