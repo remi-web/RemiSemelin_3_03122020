@@ -55,19 +55,24 @@
     #description{
 
         h3,p:nth-child(2n){
-            width: 100%;
+            width: 110%;
         }
         h3{
-            font-size: 2em;
+            font-size: 1.3em;
         }
         p:nth-child(2n){
-            font-size: 1.5em;
+            font-size: 1em;
         }
         &-explor{
-            width: 30%;
+            width: 40%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            padding-left: 5%;
+            padding-right: 5%;
 
             p{
-                font-size: 1.2em;
+                font-size: 0.8em;
+                //margin: 10%;
             }
         }
     }

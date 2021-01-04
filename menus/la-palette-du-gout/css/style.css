@@ -28,6 +28,7 @@ body main {
   padding-bottom: 40px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  padding-top: 15%;
 }
 body main #baner {
   display: flex;
@@ -73,6 +74,51 @@ a .command p {
   font-style: normal;
 }
 
+@media (min-width: 600px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body main {
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding-top: 10%;
+    justify-content: center;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+  body main h4 {
+    position: absolute;
+    top: 18%;
+    font-size: 1.3em;
+  }
+  body main h4:nth-child(2n) {
+    left: 0%;
+  }
+  body main h4:nth-child(4n) {
+    left: 33.5%;
+  }
+  body main h4:nth-child(6n) {
+    left: 67%;
+  }
+  body #baner {
+    position: absolute;
+    top: 0;
+    font-size: 1.5em;
+    width: 30%;
+  }
+  body #baner #like-icon {
+    width: 4%;
+  }
+  body .command {
+    position: absolute;
+    left: 0;
+    bottom: -70px;
+    width: 50%;
+    margin-bottom: 70px;
+  }
+}
 header {
   display: flex;
   flex-direction: column;
@@ -81,9 +127,13 @@ header {
 header .logo {
   width: 40%;
   margin-top: 20px;
-  margin-top: 3%;
+  font-family: Shrikhand;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2em;
+  margin-top: -1%;
   margin-bottom: 3%;
-  padding-bottom: 200px;
+  padding-bottom: 40%;
 }
 header .return-icon {
   position: absolute;
@@ -100,6 +150,31 @@ header .header-img {
   padding-top: 30px;
 }
 
+@media (min-width: 600px) {
+  header::before {
+    width: 100%;
+    height: 60px;
+    content: "";
+    background-color: white;
+    margin-bottom: 15%;
+  }
+  header .header-img {
+    padding-top: -5px;
+    height: 60%;
+    height: 50%;
+  }
+  header .return-icon {
+    width: 2%;
+    top: 1%;
+  }
+  header .logo {
+    font-size: 2em;
+    left: 45%;
+    width: initial;
+    top: 3%;
+    position: absolute;
+  }
+}
 h4 {
   font-family: roboto;
   font-weight: normal;
@@ -255,8 +330,26 @@ h4 {
   color: #353535;
   transform: translateX(0px);
   transition: 300ms;
+  width: 20%;
 }
 
+@media (min-width: 600px) {
+  .underline {
+    width: 30%;
+  }
+
+  .card {
+    margin-left: 5%;
+    width: 100%;
+    display: initial;
+  }
+  .card-list {
+    margin-top: 5%;
+  }
+  .card-list-txt {
+    font-size: 1.8em;
+  }
+}
 footer {
   background-color: #353535;
   padding: 20px;
@@ -269,7 +362,6 @@ footer .icon {
   width: 5%;
 }
 footer a {
-  -webkit-text-decoration: dashed;
   text-decoration: dashed;
   color: white;
   font-family: roboto;
@@ -280,6 +372,37 @@ footer a {
 footer nav ul {
   list-style: none;
   padding-left: 0;
+}
+
+@media (min-width: 600px) {
+  footer {
+    position: relative;
+    padding: 5%;
+  }
+  footer .logo {
+    opacity: 1;
+    width: 7%;
+    position: absolute;
+    top: 5%;
+    left: 1%;
+  }
+  footer a {
+    font-size: xx-large;
+    display: flex;
+  }
+  footer nav {
+    position: absolute;
+    bottom: 15%;
+    left: -1%;
+    width: 100%;
+  }
+  footer nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer nav ul li .icon {
+    width: 30%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

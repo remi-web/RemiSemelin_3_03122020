@@ -137,7 +137,25 @@ h4{
         color: $background;
         transform: translateX(0px);
         transition: 300ms;
+        width: 20%;
     }
         
 }
 
+@media (min-width:600px){
+    .underline{
+        width: 30%;
+    }
+    .card{
+        margin-left: 5%;
+        width: 100%;
+        display: initial;
+
+        &-list{
+            margin-top: 5%;
+            &-txt{
+                font-size: 1.8em;
+            }
+        }
+    }
+}

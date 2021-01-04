@@ -77,9 +77,24 @@ header .logo {
   .header-logo {
     justify-content: left;
     padding-left: 40px;
+    font-size: large;
   }
   .header .logo h1 {
     font-size: 4em;
+  }
+
+  #locate {
+    width: 20%;
+    padding-top: 10px;
+    background-color: #f6f6f6;
+  }
+  #locate-icon {
+    padding-left: 0;
+    width: 8%;
+  }
+  #locate input {
+    font-size: large;
+    background-color: #f6f6f6;
   }
 }
 #description {
@@ -143,19 +158,23 @@ header .logo {
 
 @media (min-width: 600px) {
   #description h3, #description p:nth-child(2n) {
-    width: 100%;
+    width: 110%;
   }
   #description h3 {
-    font-size: 2em;
+    font-size: 1.3em;
   }
   #description p:nth-child(2n) {
-    font-size: 1.5em;
+    font-size: 1em;
   }
   #description-explor {
-    width: 30%;
+    width: 40%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
   #description-explor p {
-    font-size: 1.2em;
+    font-size: 0.8em;
   }
 }
 #fonction {
@@ -266,17 +285,31 @@ header .logo {
   #fonction {
     display: flex;
     justify-content: center;
-    padding-bottom: 0px;
-    margin-top: 60px;
+    margin-top: 80px;
     position: relative;
+    justify-content: space-around;
   }
   #fonction h3 {
     position: absolute;
     left: 0%;
     bottom: 90%;
+    font-size: 1.8em;
   }
   #fonction .step {
-    width: 50%;
+    width: 25%;
+    font-size: 1em;
+    margin-top: 2%;
+  }
+  #fonction .step-number {
+    border-radius: 20px;
+    height: inherit;
+    font-size: inherit;
+    top: -8px;
+    left: -3%;
+  }
+  #fonction .step-bloc {
+    width: 110%;
+    height: inherit;
   }
 }
 #restaurant {
@@ -316,16 +349,13 @@ a .cards p, a .cards h4 {
   padding-left: 15px;
   margin-top: 5px;
 }
+a .cards-icon {
+  width: 50%;
+}
 a .cards h4 {
   font-family: roboto;
   font-weight: bold;
   font-style: normal;
-}
-a .cards-icon {
-  position: absolute;
-  left: 85%;
-  bottom: 10%;
-  width: 6%;
 }
 a .cards-img {
   width: 100%;
@@ -352,18 +382,22 @@ a .cards-new p {
   margin: auto;
   color: #008869;
 }
-a .cards .like-icon::after {
-  content: url("../images/icon/like/like-icon-color.svg");
+a .cards .like-icon {
   position: absolute;
   left: 85%;
-  bottom: 10%;
-  bottom: 8%;
-  transform: scale(0);
-  transition: transform 1ms ease-in-out;
+  top: 85%;
+}
+a .cards .like-icon::after {
+  content: url("../images/icon/like/like-icon-color.svg");
+  top: -2%;
+  position: absolute;
+  left: -2%;
+  width: 54%;
+  opacity: 0;
 }
 a .cards .like-icon:hover::after {
-  transform: scale(1);
-  transition: transform;
+  opacity: 1;
+  transition: opacity;
   transition-duration: 1s;
 }
 
@@ -380,12 +414,37 @@ a .cards .like-icon:hover::after {
     position: absolute;
     left: 0%;
     top: 0%;
+    font-size: 1.8em;
   }
   #restaurant .cards {
+    height: 40%;
+    margin-top: 40px;
+    margin-bottom: 10%;
+  }
+  #restaurant .cards-icon {
+    width: 100%;
+  }
+  #restaurant .cards-new {
+    width: 20%;
+    font-size: 0.5em;
+  }
+  #restaurant .cards-new p {
+    font-size: 1.5em;
+  }
+  #restaurant .cards h4 {
+    font-size: large;
+  }
+  #restaurant .like-icon {
+    top: 80%;
+    width: 10%;
+  }
+  #restaurant .like-icon::after {
     width: 100%;
   }
   #restaurant a {
     width: 40%;
+    padding-bottom: 0;
+    height: 100%;
   }
 }
 footer {
@@ -410,6 +469,37 @@ footer a {
 footer nav ul {
   list-style: none;
   padding-left: 0;
+}
+
+@media (min-width: 600px) {
+  footer {
+    position: relative;
+    padding: 5%;
+  }
+  footer .logo {
+    opacity: 1;
+    width: 7%;
+    position: absolute;
+    top: 5%;
+    left: 1%;
+  }
+  footer a {
+    font-size: xx-large;
+    display: flex;
+  }
+  footer nav {
+    position: absolute;
+    bottom: 15%;
+    left: -1%;
+    width: 100%;
+  }
+  footer nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer nav ul li .icon {
+    width: 30%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

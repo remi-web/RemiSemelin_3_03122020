@@ -48,14 +48,37 @@ header{
 
 @media (min-width:600px){
     .header{
+
         &-logo{
             justify-content: left;
             padding-left: 40px;
+            font-size: large;
+            //padding-bottom: 8%;
         }
         .logo{
             h1{
             font-size: 4em;
             }
         }
-    } 
-}
+        
+    }
+    #locate{
+        width: 20%;
+        padding-top: 10px;
+        //position: absolute;
+        //top: 3%;
+        //left: 90%;
+        background-color: #f6f6f6;
+        
+    
+        &-icon{
+            padding-left: 0;
+            width: 8%;
+        }
+        input{
+            font-size: large;
+            background-color:#f6f6f6;
+
+        }
+    }    
+}   
