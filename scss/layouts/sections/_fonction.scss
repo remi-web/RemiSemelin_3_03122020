@@ -1,5 +1,7 @@
 #fonction{
     padding-bottom: 30px;
+    padding-top: 30px;
+    width: 100%;
 
     h3{
         margin-left: 20px;
@@ -10,27 +12,25 @@
         animation-delay: 200ms;
         animation-fill-mode: forwards; 
     }
+    .step{
 
     a{
         text-decoration: dashed;
-        width: 100%;
+        //text-align: center;
         text-align: -moz-center;
+       // text-align: -webkit-center;
         color: black;
 
         :hover{
             background-color: #f7ebff;
         }
-    }
+    }}
 }
 .step{
-    @include flex-center;
-	position: relative;
-    justify-content: space-around;
-    
+
     &-number{
 	    position: absolute;
 	    left: 5%;
-	    top: 6px;
         @include round-number;
         @include police ($police);
     }
@@ -102,30 +102,62 @@
 
             h3{
                 position: absolute;
-                left: 0%;
                 bottom: 90%;
-                font-size: 1.8em;
+                font-size: 1.4em;
             }
 
         .step{
             width: 25%;
-            font-size: 1em;
+            font-size: 0.8em;
             margin-top: 2%;
         
             &-number{
-                border-radius: 20px;
-                height: inherit;
                 font-size: inherit;
-                top: -8px;
-                left:-3%;
-                //width: 10%;
+                top: -8%;
+                left:-5%;
             }    
             &-bloc{
                 width: 110%;
-                height: inherit;
-            
+                height: 60%;            
+            }
+
+            &-text{
+                margin-left: 5%;
+            }
+
+            &-icon{
+                max-width: 6%;
+
+                &-mobil{
+                 max-width: 8%;
+                 min-width: 5%;
+                }
             }
         }
     }
 }    
 
+@media (min-width:1300px){
+    #fonction{
+        margin-right: 2%;
+        margin-left: 2%;
+        justify-content: center;
+
+            h3{
+                margin-left: 0;
+            }
+
+            .step{
+                font-size: 1em;
+                width: 20%;
+                margin-left: 3%;
+                margin-right: 3%;
+
+                &-number{
+                    width: 25px;
+                    height: 25px;
+                    top: -13%;
+                }
+            }
+    }
+}

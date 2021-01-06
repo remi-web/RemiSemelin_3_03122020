@@ -36,23 +36,21 @@ header{
             height: 60px;
             content: "";
             background-color: white;
-            margin-bottom: 15%;
+            margin-bottom: 30%;
         }
         .header-img{
             padding-top: -5px;
-            height: 60%;
-            height: 50%;
+            //height: 60%;
+            height: 30%;
             }
 
         
         .return-icon{
             width: 2%;
-            top: 1%;
         }
        
         .logo{
             font-size: 2em;
-            left: 45%;
             width: initial;
             top: 3%;
             position: absolute;
@@ -60,4 +58,33 @@ header{
         }
     }
 }
-   
+
+@media (min-width:1020px){
+    header{
+
+        &::before{
+            margin-bottom: 17%;
+        }
+        
+    }
+    
+}
+
+@media (min-width:1300px){
+    header{
+
+        &::before{
+            margin-bottom: 15%;
+        }
+        .header-img{
+            height: 40%;
+        }
+
+        .return-icon{
+            width: 1.7%;
+        }
+    }
+    .header-img{
+        height: 40%;
+    }
+}

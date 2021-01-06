@@ -124,3 +124,50 @@ a{
     }
 }
 
+@media (min-width:1020px){
+    #restaurant{
+
+        .like{
+
+            &-icon{
+                width: 8%;
+                top: 75%;
+            }
+        } 
+    }
+}
+@media (min-width:1300px){
+    #restaurant{
+        margin-bottom: 5%;
+        justify-content: center;
+
+        h3{
+            font-size: 1.4em;
+        }
+
+        .like{
+
+            &-icon{
+                width: 6%;
+            }
+        }
+        .cards{
+            width: 70%;
+            
+            h4{
+                font-size:1.3em;
+            }
+            p{
+                font-size: 1em;
+            }
+            &-img{
+                height: 150px;
+            }
+            &-new{
+                p{
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+}

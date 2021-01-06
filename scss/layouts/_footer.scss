@@ -26,32 +26,65 @@ footer{
     footer{
         position: relative;
         padding: 5%;
+        display: flex;
+        justify-content: center;
+
         .logo{
             opacity: 1;
-            width: 7%;
+            width: 10%;
             position: absolute;
             top: 5%;
             left: 1%;
         }
         a{
-            font-size: xx-large;
             display: flex;
+            font-size: 0.6em;
+            width: 120%;
         }
         nav{
             position: absolute;
-            bottom: 15%;
-            left: -1%;
-            width: 100%;
+            bottom: 2%;
+            //left: -1%;
+            width: 80%;
             ul{
                 display: flex;
                 justify-content: space-around;
             
                 li{
                     .icon{
-                        width: 30%;
+                        width: 5%;
                     }
                 }
             }    
         } 
     }
 }
+
+@media (min-width:1300px){
+    footer{
+
+        .logo{
+            width: 8%;
+        }
+
+        a{
+            font-size: 1.2em;
+        }
+
+        nav{
+            bottom: 25%;
+        
+                ul{
+                    li{
+                        .icon{
+                            width: 8%;
+
+                        }
+                    }
+                }    
+        
+        }
+    }
+}
+
+

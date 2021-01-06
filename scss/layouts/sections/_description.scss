@@ -77,3 +77,25 @@
         }
     }
 }
+
+@media (min-width:1300px){
+    #description{
+
+        h3{
+            font-size: 1.7em;
+        }
+
+        p:nth-child(2n){
+            font-size: 1.2em;
+        }
+        &-explor{
+            width: initial;
+            height: 2em;
+            p{
+                font-size: 1em;
+            }
+        }
+    }
+
+}
+

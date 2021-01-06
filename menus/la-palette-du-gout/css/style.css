@@ -22,6 +22,7 @@
 body {
   margin-left: 0;
   margin-right: 0;
+  overflow-x: hidden;
 }
 body main {
   background-color: #f6f6f6;
@@ -42,8 +43,7 @@ body main #baner h3 {
   font-size: 1.7em;
 }
 body main #baner #like-icon {
-  width: 6%;
-  color: white;
+  max-width: 6%;
 }
 
 h4 {
@@ -75,48 +75,60 @@ a .command p {
 }
 
 @media (min-width: 600px) {
-  html {
-    overflow-x: hidden;
+  body main {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
   }
-
+  body main #baner {
+    justify-content: center;
+  }
+  body main #baner #like-icon {
+    width: 3%;
+    margin-left: 5%;
+  }
+  body main h4 {
+    margin-bottom: 3%;
+  }
+  body main h4 .underline {
+    width: 4%;
+  }
+}
+@media (min-width: 1300px) {
   body main {
     display: flex;
-    width: 100%;
-    position: relative;
-    padding-top: 10%;
+    flex-direction: initial;
     justify-content: center;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
+    position: relative;
+  }
+  body main #baner {
+    position: absolute;
+  }
+  body main #baner #like-icon {
+    width: 8%;
+    max-width: initial;
   }
   body main h4 {
     position: absolute;
-    top: 18%;
-    font-size: 1.3em;
+    top: 20%;
+    font-size: 1.2em;
+  }
+  body main h4 .underline {
+    width: 40%;
   }
   body main h4:nth-child(2n) {
-    left: 0%;
+    left: 4%;
+    margin-left: 0;
   }
   body main h4:nth-child(4n) {
-    left: 33.5%;
+    left: 37%;
   }
   body main h4:nth-child(6n) {
-    left: 67%;
+    left: 70%;
   }
-  body #baner {
+  body a .command {
     position: absolute;
-    top: 0;
-    font-size: 1.5em;
     width: 30%;
-  }
-  body #baner #like-icon {
-    width: 4%;
-  }
-  body .command {
-    position: absolute;
-    left: 0;
-    bottom: -70px;
-    width: 50%;
-    margin-bottom: 70px;
   }
 }
 header {
@@ -156,23 +168,40 @@ header .header-img {
     height: 60px;
     content: "";
     background-color: white;
-    margin-bottom: 15%;
+    margin-bottom: 30%;
   }
   header .header-img {
     padding-top: -5px;
-    height: 60%;
-    height: 50%;
+    height: 30%;
   }
   header .return-icon {
     width: 2%;
-    top: 1%;
   }
   header .logo {
     font-size: 2em;
-    left: 45%;
     width: initial;
     top: 3%;
     position: absolute;
+  }
+}
+@media (min-width: 1020px) {
+  header::before {
+    margin-bottom: 17%;
+  }
+}
+@media (min-width: 1300px) {
+  header::before {
+    margin-bottom: 15%;
+  }
+  header .header-img {
+    height: 40%;
+  }
+  header .return-icon {
+    width: 1.7%;
+  }
+
+  .header-img {
+    height: 40%;
   }
 }
 h4 {
@@ -244,20 +273,22 @@ h4 {
 }
 .card-list:hover > .card-list-txt p {
   width: 60%;
-  transition-duration: 400ms;
+}
+.card-list:hover > .card-list-txt h5 {
+  width: 60%;
 }
 .card-list:hover::before {
-  transform: scaleX(1);
+  transform: translateX(0%);
 }
 .card-list:hover::after {
-  transform: translateX(-40px);
+  transform: translateX(0%);
   animation-name: check-icon;
-  animation-duration: 300ms;
+  animation-duration: 700ms;
   animation-delay: 100ms;
   animation-timing-function: cubic-bezier(0.4, 0.41, 0.74, 0.71);
 }
 .card-list:hover .price {
-  transform: translateX(-60px);
+  transform: translateX(-85%);
 }
 .card-list::before {
   display: flex;
@@ -272,25 +303,28 @@ h4 {
   border-bottom-right-radius: 10px;
   content: "";
   background-color: #99E2D0;
-  transform: scaleX(0);
+  transform: translateX(105%);
   transition: transform 400ms;
   transform-origin: right;
+  transition-duration: 800ms;
+  transition-delay: 100ms;
 }
 .card-list::after {
   content: url("../../../images/icon/check-icon.svg");
   position: absolute;
-  left: 99%;
+  right: 6%;
   top: 30%;
-  transform: translateX(0px);
-  transition-duration: 300ms;
+  transform: translateX(400%);
+  transition-duration: 700ms;
+  transition-delay: 100ms;
 }
 @keyframes check-icon {
   0% {
-    transform: translateX(0) rotate(0deg);
+    transform: translateX(400%) rotate(0deg);
     transform-origin: 10px 8px;
   }
   100% {
-    transform: translateX(-40px) rotate(360deg);
+    transform: translateX(0%) rotate(360deg);
     transform-origin: 10px 11.5px;
   }
 }
@@ -306,6 +340,11 @@ h4 {
 .card-list h5 {
   font-size: 0.7em;
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition-duration: 800ms;
+  transition-delay: 150ms;
 }
 .card-list p {
   font-size: 0.5em;
@@ -318,6 +357,7 @@ h4 {
   white-space: nowrap;
   text-overflow: ellipsis;
   transition-duration: 800ms;
+  transition-delay: 150ms;
 }
 .card .price {
   font-family: roboto;
@@ -329,25 +369,66 @@ h4 {
   top: 55%;
   color: #353535;
   transform: translateX(0px);
-  transition: 300ms;
+  transition: 400ms;
+  transition-delay: 200ms;
   width: 20%;
 }
 
 @media (min-width: 600px) {
-  .underline {
-    width: 30%;
-  }
-
   .card {
     margin-left: 5%;
     width: 100%;
     display: initial;
   }
-  .card-list {
-    margin-top: 5%;
-  }
   .card-list-txt {
     font-size: 1.8em;
+  }
+  .card-list::after {
+    content: url("../../../images/icon/check-icon 3030.svg");
+    right: 8%;
+  }
+  .card-list::after .checking {
+    width: 40px;
+    height: 40px;
+  }
+  .card-list::after:hover::after {
+    animation-delay: 100ms;
+  }
+  @keyframes check-icon {
+    0% {
+      transform: translateX(400%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(0%) rotate(360deg);
+    }
+  }
+}
+@media (min-width: 1020px) {
+  .card-list::after {
+    transform: translateX(600%);
+    animation-delay: 100ms;
+  }
+}
+@media (min-width: 1300px) {
+  .card {
+    display: flex;
+    margin-left: 0;
+    margin-bottom: 10%;
+    margin-top: 15%;
+    justify-content: center;
+  }
+  .card-list {
+    width: 80%;
+  }
+  .card-list::after {
+    content: url("../../../images/icon/check-icon.svg");
+    right: 7%;
+  }
+  .card-list-txt p {
+    font-size: 0.5em;
+  }
+  .card-list-txt h5 {
+    font-size: 0.6em;
   }
 }
 footer {
@@ -378,30 +459,43 @@ footer nav ul {
   footer {
     position: relative;
     padding: 5%;
+    display: flex;
+    justify-content: center;
   }
   footer .logo {
     opacity: 1;
-    width: 7%;
+    width: 10%;
     position: absolute;
     top: 5%;
     left: 1%;
   }
   footer a {
-    font-size: xx-large;
     display: flex;
+    font-size: 0.6em;
+    width: 120%;
   }
   footer nav {
     position: absolute;
-    bottom: 15%;
-    left: -1%;
-    width: 100%;
+    bottom: 2%;
+    width: 80%;
   }
   footer nav ul {
     display: flex;
     justify-content: space-around;
   }
   footer nav ul li .icon {
-    width: 30%;
+    width: 15%;
+  }
+}
+@media (min-width: 1300px) {
+  footer a {
+    font-size: x-large;
+  }
+  footer nav {
+    bottom: 25%;
+  }
+  footer .icon {
+    width: 20%;
   }
 }
 
