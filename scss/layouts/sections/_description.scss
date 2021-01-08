@@ -29,24 +29,7 @@
     }
 
    
-    h3{
-        opacity: 0;
-        animation: fadein 300ms;
-        animation-delay: 200ms;
-        animation-fill-mode: forwards;
-    }
-    p:nth-child(2n){
-        opacity: 0;
-        animation: fadein 300ms;
-        animation-delay: 800ms;
-        animation-fill-mode: forwards;
-    }
-    &-explor{
-        opacity: 0;
-        animation: fadein 1s;
-        animation-delay: 1s;
-        animation-fill-mode: forwards;
-    }
+    
     
 }
 

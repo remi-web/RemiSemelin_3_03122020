@@ -23,6 +23,7 @@ body {
   margin-left: 0;
   margin-right: 0;
   overflow-x: hidden;
+  margin-top: 0;
 }
 body main {
   background-color: #f6f6f6;
@@ -171,8 +172,9 @@ header .header-img {
     margin-bottom: 30%;
   }
   header .header-img {
-    padding-top: -5px;
-    height: 30%;
+    padding-top: -10px;
+    top: -40px;
+    height: 35%;
   }
   header .return-icon {
     width: 2%;
@@ -180,7 +182,7 @@ header .header-img {
   header .logo {
     font-size: 2em;
     width: initial;
-    top: 3%;
+    top: 1%;
     position: absolute;
   }
 }
@@ -188,13 +190,13 @@ header .header-img {
   header::before {
     margin-bottom: 17%;
   }
+  header .header-img {
+    top: -40px;
+  }
 }
 @media (min-width: 1300px) {
   header::before {
     margin-bottom: 15%;
-  }
-  header .header-img {
-    height: 40%;
   }
   header .return-icon {
     width: 1.7%;
@@ -476,26 +478,32 @@ footer nav ul {
   }
   footer nav {
     position: absolute;
-    bottom: 2%;
-    width: 80%;
+    bottom: 30%;
+    width: 100%;
   }
   footer nav ul {
     display: flex;
     justify-content: space-around;
   }
+  footer nav ul li {
+    width: 100%;
+  }
   footer nav ul li .icon {
-    width: 15%;
+    width: 5%;
   }
 }
 @media (min-width: 1300px) {
+  footer .logo {
+    width: 8%;
+  }
   footer a {
-    font-size: x-large;
+    font-size: 1.2em;
   }
   footer nav {
     bottom: 25%;
   }
-  footer .icon {
-    width: 20%;
+  footer nav ul li .icon {
+    width: 8%;
   }
 }
 

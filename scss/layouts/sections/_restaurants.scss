@@ -26,11 +26,11 @@ a{
 
             &-icon{
                 width: 50%;
-            }    
+            }
 
-                h4{
-                    @include police ($police-bold);
-                }
+            h4{
+                @include police ($police-bold);
+            }
             
             &-img{
                 width: 100%;
@@ -50,15 +50,15 @@ a{
             }
 
             .like-icon{
-                    @include like;
+                @include like;
 
                 &::after{
                     content: url("../images/icon/like/like-icon-color.svg");
-                    top: -2%;
                     position: absolute;
-                    left: -2%;
-                    width: 54%;
+                    right: 53%;
+                    bottom: 10%;
                     opacity: 0;
+                    width: 45%;
                 }
 
                 &:hover::after{
@@ -68,7 +68,7 @@ a{
                 }
             }
         }
-
+    
 }               
 
 @media (min-width:600px){
@@ -110,10 +110,12 @@ a{
 
         .like-icon{
                 top: 80%;
-                width: 10%;
+                width: 8%;
 
                 &::after{
-                    width: 100%;
+                    width: 96%;
+                    right: 3%;
+                    bottom: 5%;
                 }
             }
         a{

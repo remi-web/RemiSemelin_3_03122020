@@ -1,3 +1,6 @@
+html{
+    overflow-x: hidden;
+    }
 header{
     @include flex-columm;
         align-items: center;
@@ -47,6 +50,10 @@ header{
 }
 
 @media (min-width:600px){
+    html{
+        overflow-x: hidden;
+        }
+    
     .header{
 
         &-logo{
@@ -67,9 +74,6 @@ header{
         width: 20%;
         padding-top: 10px;
         justify-content: initial;
-        //position: absolute;
-        //top: 3%;
-        //left: 90%;
         background-color: #f6f6f6;
         
     
