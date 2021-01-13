@@ -1,9 +1,16 @@
 @mixin logo{
-    width: 40%;
     margin-top: 20px;
 }
 
-
+//-------liseret gris--------//
+@mixin locate {
+    @include flex-center;
+    width: 100%;
+	background-color: $light-grey;
+    height: 50px;
+}
+//-------boutton----------//
+    
 @mixin txt-button-pink{
     @include police ($police-bold);
 }
@@ -12,13 +19,12 @@
     border-radius: 30px;
     color: white;
     background: $secondaire;
-    background: linear-gradient(170deg,$secondaire 1%, $primaire 180%);
+    background: $gradient;
     width: 55%;
     align-items: center;
     display: flex;
     justify-content: center;
     height: 40px;
-    //font-family: roboto, sans-serif;
     box-shadow: 2px 2px 10px grey;
 
     
@@ -122,8 +128,6 @@
     justify-content: right;
     align-items: center;
     position: absolute;
-    left: 80%;
-    //top: 1%;
     width: 20%;
     height: 100%;
     border-top-right-radius: 10px;
@@ -134,5 +138,15 @@
     left: 110%;
     top: 30%;
     width: 30%;
+}
+
+//----------surlignage vert---------//
+
+@mixin underline {
+    border: solid;
+    border-width: 2px;
+    border-color: $tertiaire;
+    width: 8%
+    
 }
 

@@ -1,17 +1,19 @@
+html{
+    overflow-x: hidden;
+}
 body{
     margin-left: 0;
     margin-right: 0;
     overflow-x: hidden;
     margin-top: 0;
     margin-bottom: 0;
+
     main{
         background-color: $ultra-light-grey;
         padding-bottom: 40px;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
-        padding-top: 15%;
 
-        //z-index: 1;
         #baner{
             @include flex-center;
             justify-content: space-around;
@@ -19,17 +21,34 @@ body{
             h3{
                 @include police ($police-bis);
                 font-size:1.7em;
+                opacity: 0;
+                animation: img-load 2s 1.5s forwards;
+                
             }
+                @keyframes img-load{
+                    0%{ opacity:0;}
+                    100%{ opacity:1;}            
+                }    
+            
             #like-icon{
                max-width: 6%;
+               opacity: 0;
+               animation: img-load 2s 1.5s forwards;
             }
-            
         }
+        h4{
+            margin-left: 5%;
+            opacity: 0;
+            animation: img-load 1s 1s forwards;
+        }
+        @keyframes img-load {
+            0%{ opacity:0;}
+            100%{ opacity:1;}            
+        }    
     }
 }
-h4{
-    margin-left: 5%;
-}
+
+
 a{
     text-decoration: none;
 .command{
@@ -37,6 +56,8 @@ a{
     margin: auto;
     margin-top: 30px;
     text-decoration: dashed;
+    border-style: none;
+
         p{
             @include txt-button-pink;
         }
@@ -97,7 +118,7 @@ a{
           
             h4{
                 position: absolute;
-                top: 20%;
+                top: 15%;
                 font-size: 1.2em;
 
                 .underline{
@@ -120,6 +141,8 @@ a{
             .command{
                 position: absolute;
                 width: 30%;
+                bottom: 10%;
+                left: 35%;
             }
         }
     }

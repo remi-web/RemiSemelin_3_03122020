@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/style.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>contact</title>
+    </head>
+    
+
+    <body>
+        <header>
+            <a href="../index.html"> <img class="return-icon" src="../images/icon/ic-back.svg" alt="icone de retour en arrière"></a>
+            <img class="logo" src="../images/logo/ohmyfood.png">    
+        </header>
+        <h3>Formulaire de contact</h3>
+        <form action="/ma-page-de-traitement" method="post">
+            <div class="formu name">
+                <label for="name">Nom :</label>
+                    <div class="underline"></div>
+                <input type="text" id="name" name="user_name">
+            </div>
+            <div class="formu email">
+                <label for="mail">e-mail :</label>
+                <div class="underline"></div>
+                <input type="email" id="mail" name="user_mail">
+            </div>
+            <div class="formu message">
+                <label for="msg">Message :</label>
+                <div class="underline"></div>
+                <input type="text" id="msg" name="user_message">
+            </div>
+            <button type=submit>Envoyer</button>
+        </form>
+    </body>
+</html>

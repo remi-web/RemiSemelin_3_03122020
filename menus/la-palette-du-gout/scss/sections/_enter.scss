@@ -4,10 +4,7 @@ h4{
     
 }
 .underline{
-    border: solid;
-    border-width: 2px;
-    border-color: $tertiaire;
-    width: 8%;
+   @include underline;
 }
 .card{
    @include flex-columm;
@@ -32,85 +29,83 @@ h4{
         &:nth-child(1n){
             opacity: 0;
             animation: fadein 2s;
-            animation-delay: 600ms;
+            animation-delay: 1000ms;
             animation-fill-mode: forwards;
         }
 
         &:nth-child(2n){
             opacity: 0;
             animation: fadein 2s;
-            animation-delay: 1000ms;
+            animation-delay: 1500ms;
             animation-fill-mode: forwards;
         }
 
         &:nth-child(3n){
             opacity: 0;
             animation: fadein 2s;
-            animation-delay: 1500ms;
+            animation-delay: 1800ms;
             animation-fill-mode: forwards;
         }
 
         &:nth-child(4n){
             opacity: 0;
             animation: fadein 2s;
-            animation-delay: 2000ms;
+            animation-delay: 2200ms;
             animation-fill-mode: forwards;
         }
 //--------réduction du texte---------------//        
     overflow: hidden;
 
-        &:hover>.card-list-txt p{
+        &:active>.card-list-txt p{
             width: 60%;
-            //transition-duration: 400ms;
         }
-        &:hover>.card-list-txt h5{
+        &:active>.card-list-txt h5{
             width: 60%;
-            //transition-duration: 800ms;
-            //transition-delay: 1s;
-
         }
 //------translate fond vert---------------------//
-        &:hover::before{
-            transform: translateX(0%);
+        &:active::before{
+            transform: translateX(-100%);
         }
 //---------rotation + translation ckeck------//  
-        &:hover::after{
-            transform:translateX(0%);
+        &:active::after{
+            transform:translateX(-290%);
             animation-name: check-icon;
-            animation-duration: 700ms;
-            animation-delay: 100ms;
-            animation-timing-function: cubic-bezier(.4,.41,.74,.71);
+            transform-origin: center;
+            animation-duration: 600ms;
+            animation-fill-mode: backwards;
             } 
 
-        &:hover .price{
-            transform: translateX(-85%)
+        &:active .price{
+            transform: translateX(-100%)
         }
         
         &::before{
             @include check;
+            left: 100%;
             content: "";
             background-color: $tertiaire;
-            transform: translateX(105%);
-            transition: transform 400ms;
-            transform-origin: right;
-            transition-duration: 800ms;
-            transition-delay: 100ms;
+            transform: translateX(0);
+            transition: transform ;
+            transition-duration: 600ms;
         }
 
         &::after{//-----check-icon--------//
             content: url("../../../images/icon/check-icon.svg");
             position: absolute;
-            right: 6%;
+            height: 35%;
+            left: 105%;
             top: 30%;
-            transform: translateX(400%) ; 
-            transition-duration: 700ms ;
-            transition-delay: 100ms;
+            transform: translateX(0px) ;
+            transition: transform ;
+            transition-duration: 500ms ;
         }
            
         @keyframes check-icon{
-            0% {transform: translateX(400%) rotate(0deg);transform-origin: 10px 8px;}
-            100% {transform: translateX(0%) rotate(360deg); transform-origin: 10px 11.5px;}
+            0% {transform: translateX(0%) rotate(0deg); }
+            100% {transform:translateX(-290%) rotate(720deg);}
+
         }
+        
 
         &-txt{
             @include police ($police);
@@ -123,9 +118,9 @@ h4{
             margin: 0;
             overflow: hidden;
             white-space: nowrap;
+            width: 90%;
             text-overflow: ellipsis;
             transition-duration: 800ms;
-            transition-delay: 150ms;
         }
 
         p{
@@ -138,8 +133,7 @@ h4{
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
-            transition-duration: 800ms;
-            transition-delay: 150ms
+            transition-duration: 600ms;
         }
     }
         
@@ -152,12 +146,26 @@ h4{
         color: $background;
         transform: translateX(0px);
         transition: 400ms;
-        transition-delay: 200ms;
         width: 20%;
     }
         
 }
+@media (min-width:400px){
+    .card{
 
+        &-list{
+
+            &:active::after{
+                transform: translateX(-330%);
+                animation-duration: 800ms;
+            }
+            @keyframes check-icon{
+                0% {transform: translateX(0%) rotate(0deg); }
+                100% {transform:translateX(-330%) rotate(720deg);}
+            }
+        }
+    }
+}
 @media (min-width:600px){
     
     .card{
@@ -166,40 +174,59 @@ h4{
         display: initial;
 
         &-list{
+
             &-txt{
                 font-size: 1.8em;
             }
+            
             &::after{
                 content: url("../../../images/icon/check-icon 3030.svg");
-                right: 8%;
-               // width: 100%;
 
-                .checking{
-                    width: 40px;
-                    height: 40px;
                 }
-            &:hover::after{
-                animation-delay: 100ms;
+            &:active::after{
+                transform: translateX(-350%);
+                animation-duration: 800ms;
             }
             @keyframes check-icon{
-                0% {transform: translateX(400%) rotate(0deg);}
-                100% {transform: translateX(0%) rotate(360deg);}
+                0% {transform: translateX(0%) rotate(0deg); }
+                100% {transform:translateX(-350%) rotate(720deg);}
             }
-    
-            }
-           
         }
     }
 }
-
-@media (min-width:1020px){
+@media (min-width:768px){
     .card{
 
         &-list{
 
+            &:active::after{
+                transform: translateX(-380%);
+                animation-duration: 800ms;
+            }
+            @keyframes check-icon{
+                0% {transform: translateX(0%) rotate(0deg); }
+                100% {transform:translateX(-380%) rotate(720deg);}
+            }
+        }
+    }
+}
+
+
+@media (min-width:1020px) and (max-width:1300px){
+    .card{
+
+        &-list{
+
+            &::before{
+                width: 13%;
+            }
+
             &::after{
-                transform: translateX(600%);
-                animation-delay: 100ms;
+                height: 27%;
+            }
+
+            &:active .price{
+                transform: translateX(-40%);
             }
 
         }
@@ -209,20 +236,29 @@ h4{
 
     .card{
         display: flex;
-        //flex-direction: initial;
         margin-left: 0;
         margin-bottom: 10%;
-        margin-top: 15%;
+        margin-top: 13%;
         justify-content: center;
 
         &-list{
             width: 80%;
 
-            &::after{
-                content: url("../../../images/icon/check-icon.svg");
-                right: 7%;
+            &::before{
+                width: 18%;
             }
 
+            &::after{
+                content: url("../../../images/icon/check-icon.svg");
+            }
+            &:active::after{
+                transform: translateX(-300%);
+                animation-duration: 800ms;
+            }
+            @keyframes check-icon{
+                0% {transform: translateX(0%) rotate(0deg); }
+                100% {transform:translateX(-300%) rotate(720deg);}
+            }
             &-txt{
                 p{
                     font-size: 0.5em;

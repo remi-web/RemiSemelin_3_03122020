@@ -3,22 +3,23 @@ html{
     }
 header{
     @include flex-columm;
-        align-items: center;
-        margin-top: 15px;
-        background-color: $ultra-light-grey;
-        margin-top: -10px;
+    align-items: center;
+    margin-top: 15px;
+    background-color: $ultra-light-grey;
+    margin-top: -10px;
 
-    .logo{
-        @include police ($police-bis);
+        .logo{
+            width: 40%;
+            padding-top: 10%;
+        }
     }
-}
 .header-logo{
     background-color: white;
     @include flex-center;
-    padding-bottom: 10px;
     box-shadow: 0px 1px 4px grey;
     z-index: 1;
     width: 100%;
+    padding-bottom: 3%;
 }
 
 #locate{
@@ -29,12 +30,11 @@ header{
 
     &-icon{
 	    width:3%;
-	    padding-left: 40px;
     }
 
     form{
         padding-left: 10px;
-        //width: 48%;
+        width: 25%;
     }
     input{
 	    border: none;
@@ -52,41 +52,43 @@ header{
 @media (min-width:600px){
     html{
         overflow-x: hidden;
-        }
-    
-    .header{
 
-        &-logo{
-            justify-content: left;
-            padding-bottom: inherit;
-            font-size: large;
         
-            .logo{
-                 padding-left: 40px;
-                  h1{
-                    font-size: 2em;
-                }
+        #locate{
+            width: 20%;
+            padding-top: 10px;
+            justify-content: initial;
+            background-color: #f6f6f6;
+        
+    
+            &-icon{
+                padding-left: 0;
+                width: 8%;
+            }
+
+            input{
+                font-size: large;
+                background-color:#f6f6f6;
             }
         }
-        
-    }
-    #locate{
-        width: 20%;
-        padding-top: 10px;
-        justify-content: initial;
-        background-color: #f6f6f6;
-        
-    
-        &-icon{
-            padding-left: 0;
-            width: 8%;
-        }
-        input{
-            font-size: large;
-            background-color:#f6f6f6;
 
+        header{
+
+            .logo{
+                width: 30%;
+                padding-top: 5%;
+                padding-bottom: 5%;
+            }
         }
     }    
+}
+@media (min-width:1024px){
+    #locate{
+        justify-content: center;
+        form{
+            width: 70%;
+        }
+    }
 }
 
 @media (min-width:1300px){
@@ -101,14 +103,12 @@ header{
             justify-content: center;
 
                 form{
-                    width: 35%;
+                    width: 50%;
                 }
 
                 &-icon{
                     width: 6%;
                 }
         }
-        
-        
     }
 }
