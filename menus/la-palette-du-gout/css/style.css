@@ -101,7 +101,7 @@ a .command p {
   font-style: normal;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   body main {
     padding-top: 0;
     display: flex;
@@ -195,7 +195,7 @@ header .header-img {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   header {
     margin-bottom: 0;
   }
