@@ -310,23 +310,23 @@ h4 {
   animation-delay: 2200ms;
   animation-fill-mode: forwards;
 }
-.card-list:active > .card-list-txt p {
+.card-list:hover > .card-list-txt p {
   width: 60%;
 }
-.card-list:active > .card-list-txt h5 {
+.card-list:hover > .card-list-txt h5 {
   width: 60%;
 }
-.card-list:active::before {
+.card-list:hover::before {
   transform: translateX(-100%);
 }
-.card-list:active::after {
+.card-list:hover::after {
   transform: translateX(-290%);
   animation-name: check-icon;
   transform-origin: center;
   animation-duration: 600ms;
   animation-fill-mode: backwards;
 }
-.card-list:active .price {
+.card-list:hover .price {
   transform: translateX(-100%);
 }
 .card-list::before {
@@ -409,7 +409,7 @@ h4 {
 }
 
 @media (min-width: 400px) {
-  .card-list:active::after {
+  .card-list:hover::after {
     transform: translateX(-330%);
     animation-duration: 800ms;
   }
@@ -434,7 +434,7 @@ h4 {
   .card-list::after {
     content: url("../../../images/icon/check-icon 3030.svg");
   }
-  .card-list:active::after {
+  .card-list:hover::after {
     transform: translateX(-350%);
     animation-duration: 800ms;
   }
@@ -448,7 +448,7 @@ h4 {
   }
 }
 @media (min-width: 768px) {
-  .card-list:active::after {
+  .card-list:hover::after {
     transform: translateX(-380%);
     animation-duration: 800ms;
   }
@@ -468,7 +468,7 @@ h4 {
   .card-list::after {
     height: 27%;
   }
-  .card-list:active .price {
+  .card-list:hover .price {
     transform: translateX(-40%);
   }
 }
@@ -489,7 +489,7 @@ h4 {
   .card-list::after {
     content: url("../../../images/icon/check-icon.svg");
   }
-  .card-list:active::after {
+  .card-list:hover::after {
     transform: translateX(-300%);
     animation-duration: 800ms;
   }

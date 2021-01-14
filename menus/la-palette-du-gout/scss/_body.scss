@@ -1,6 +1,7 @@
 html{
     overflow-x: hidden;
 }
+
 body{
     margin-left: 0;
     margin-right: 0;
@@ -36,11 +37,13 @@ body{
                animation: img-load 2s 1.5s forwards;
             }
         }
+
         h4{
             margin-left: 5%;
             opacity: 0;
             animation: img-load 1s 1s forwards;
         }
+
         @keyframes img-load {
             0%{ opacity:0;}
             100%{ opacity:1;}            
@@ -51,12 +54,13 @@ body{
 
 a{
     text-decoration: none;
-.command{
-    @include button-pink;
-    margin: auto;
-    margin-top: 30px;
-    text-decoration: dashed;
-    border-style: none;
+
+    .command{
+        @include button-pink;
+        margin: auto;
+        margin-top: 30px;
+        text-decoration: dashed;
+        border-style: none;
 
         p{
             @include txt-button-pink;
@@ -81,6 +85,7 @@ a{
                     margin-left: 5%;
                 }
             }
+
         h4{
             margin-bottom: 3%;
 
@@ -90,9 +95,6 @@ a{
             }
         }
     }
-
-   
-
 }
 
 @media (min-width:1300px){
@@ -106,13 +108,10 @@ a{
 
             #baner{
                 position: absolute;
-                //margin-left: 40%;
-                //margin-right: 40%;
-
+     
                 #like-icon{
                     width: 8%;
                     max-width: initial;
-                    
                 }
             }
           
@@ -125,18 +124,22 @@ a{
                     width: 40%;
                 }
             }
+
             h4:nth-child(2n){
                 left: 4%;
                 margin-left: 0;
             }
+
             h4:nth-child(4n){
                 left: 37%;
             }
+
             h4:nth-child(6n){
                 left: 70%;
             }
             
         }
+
         a{
             .command{
                 position: absolute;
@@ -146,5 +149,4 @@ a{
             }
         }
     }
-
 }

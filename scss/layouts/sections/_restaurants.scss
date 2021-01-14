@@ -13,16 +13,16 @@
 a{
     text-decoration: none;
 
-        .cards{
-            @include cards;
-            p, h4{
-            margin: 0;
-            text-decoration: none;
-            color: black;
-            @include police ($police);
-            font-size: 0.9em;
-            padding-left: 15px;
-            margin-top: 5px}
+    .cards{
+        @include cards;
+        p, h4{
+        margin: 0;
+        text-decoration: none;
+        color: black;
+        @include police ($police);
+        font-size: 0.9em;
+        padding-left: 15px;
+        margin-top: 5px}
 
             &-icon{
                 width: 50%;
@@ -55,10 +55,17 @@ a{
                 &::after{
                     content: url("../images/icon/like/like-icon-color.svg");
                     position: absolute;
-                    right: 53%;
-                    bottom: 10%;
+                    right: 50%;
+                    bottom: 0%;
                     opacity: 0;
-                    width: 45%;
+                    width: 52%;
+                }
+
+                &:hover{
+                    border: transparent;
+                    transition: border;
+                    transition-duration: 1s ;
+
                 }
 
                 &:hover::after{
@@ -113,9 +120,9 @@ a{
                 width: 8%;
 
                 &::after{
-                    width: 96%;
-                    right: 3%;
-                    bottom: 5%;
+                    width: 100%;
+                    right: 2%;
+                    bottom: 2%;
                 }
             }
         a{
@@ -126,18 +133,19 @@ a{
     }
 }
 
-@media (min-width:1020px){
+@media (min-width:768px){
     #restaurant{
 
-        .like{
+        .like-icon{
 
-            &-icon{
-                width: 8%;
-                top: 75%;
+            &::after{
+                right: 1%;
+                bottom: 3%;
             }
-        } 
+        }
     }
 }
+
 @media (min-width:1300px){
     #restaurant{
         justify-content: center;
@@ -146,12 +154,6 @@ a{
             font-size: 1.4em;
         }
 
-        .like{
-
-            &-icon{
-                width: 6%;
-            }
-        }
         .cards{
             width: 70%;
             

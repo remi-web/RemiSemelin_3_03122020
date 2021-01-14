@@ -3,9 +3,11 @@ h4{
     font-size:0.8em;
     
 }
+
 .underline{
    @include underline;
 }
+
 .card{
    @include flex-columm;
    align-items: center;
@@ -54,20 +56,20 @@ h4{
             animation-fill-mode: forwards;
         }
 //--------réduction du texte---------------//        
-    overflow: hidden;
+        overflow: hidden;
 
-        &:active>.card-list-txt p{
+        &:hover>.card-list-txt p{
             width: 60%;
         }
-        &:active>.card-list-txt h5{
+        &:hover>.card-list-txt h5{
             width: 60%;
         }
 //------translate fond vert---------------------//
-        &:active::before{
+        &:hover::before{
             transform: translateX(-100%);
         }
 //---------rotation + translation ckeck------//  
-        &:active::after{
+        &:hover::after{
             transform:translateX(-290%);
             animation-name: check-icon;
             transform-origin: center;
@@ -75,7 +77,7 @@ h4{
             animation-fill-mode: backwards;
             } 
 
-        &:active .price{
+        &:hover .price{
             transform: translateX(-100%)
         }
         
@@ -150,12 +152,13 @@ h4{
     }
         
 }
+
 @media (min-width:400px){
     .card{
 
         &-list{
 
-            &:active::after{
+            &:hover::after{
                 transform: translateX(-330%);
                 animation-duration: 800ms;
             }
@@ -166,6 +169,7 @@ h4{
         }
     }
 }
+
 @media (min-width:600px){
     
     .card{
@@ -183,7 +187,7 @@ h4{
                 content: url("../../../images/icon/check-icon 3030.svg");
 
                 }
-            &:active::after{
+            &:hover::after{
                 transform: translateX(-350%);
                 animation-duration: 800ms;
             }
@@ -194,15 +198,17 @@ h4{
         }
     }
 }
+
 @media (min-width:768px){
     .card{
 
         &-list{
 
-            &:active::after{
+            &:hover::after{
                 transform: translateX(-380%);
                 animation-duration: 800ms;
             }
+
             @keyframes check-icon{
                 0% {transform: translateX(0%) rotate(0deg); }
                 100% {transform:translateX(-380%) rotate(720deg);}
@@ -225,13 +231,14 @@ h4{
                 height: 27%;
             }
 
-            &:active .price{
+            &:hover .price{
                 transform: translateX(-40%);
             }
 
         }
     }
 }
+
 @media (min-width:1300px){
 
     .card{
@@ -251,14 +258,17 @@ h4{
             &::after{
                 content: url("../../../images/icon/check-icon.svg");
             }
-            &:active::after{
+
+            &:hover::after{
                 transform: translateX(-300%);
                 animation-duration: 800ms;
             }
+
             @keyframes check-icon{
                 0% {transform: translateX(0%) rotate(0deg); }
                 100% {transform:translateX(-300%) rotate(720deg);}
             }
+            
             &-txt{
                 p{
                     font-size: 0.5em;

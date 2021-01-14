@@ -407,10 +407,15 @@ a .cards .like-icon {
 a .cards .like-icon::after {
   content: url("../images/icon/like/like-icon-color.svg");
   position: absolute;
-  right: 53%;
-  bottom: 10%;
+  right: 50%;
+  bottom: 0%;
   opacity: 0;
-  width: 45%;
+  width: 52%;
+}
+a .cards .like-icon:hover {
+  border: transparent;
+  transition: border;
+  transition-duration: 1s;
 }
 a .cards .like-icon:hover::after {
   opacity: 1;
@@ -456,9 +461,9 @@ a .cards .like-icon:hover::after {
     width: 8%;
   }
   #restaurant .like-icon::after {
-    width: 96%;
-    right: 3%;
-    bottom: 5%;
+    width: 100%;
+    right: 2%;
+    bottom: 2%;
   }
   #restaurant a {
     width: 40%;
@@ -466,10 +471,10 @@ a .cards .like-icon:hover::after {
     height: 100%;
   }
 }
-@media (min-width: 1020px) {
-  #restaurant .like-icon {
-    width: 8%;
-    top: 75%;
+@media (min-width: 768px) {
+  #restaurant .like-icon::after {
+    right: 1%;
+    bottom: 3%;
   }
 }
 @media (min-width: 1300px) {
@@ -478,9 +483,6 @@ a .cards .like-icon:hover::after {
   }
   #restaurant h3 {
     font-size: 1.4em;
-  }
-  #restaurant .like-icon {
-    width: 6%;
   }
   #restaurant .cards {
     width: 70%;
@@ -589,11 +591,10 @@ footer nav ul {
 .body-loader {
   background-color: white;
   width: 100%;
+  height: 268%;
   position: absolute;
-  top: 8%;
+  top: 9%;
   z-index: 2;
-  padding-top: 70%;
-  padding-bottom: 80%;
   animation: bars-opacity, index;
   animation-delay: 7s;
   animation-duration: 100ms;
@@ -601,11 +602,11 @@ footer nav ul {
 }
 
 .load {
-  height: 20%;
+  height: 10%;
   display: flex;
   justify-content: space-evenly;
   position: absolute;
-  top: 30%;
+  top: 15%;
   width: 100%;
 }
 .load-bar {
@@ -671,15 +672,26 @@ footer nav ul {
   }
 }
 @media (min-width: 600px) {
+  .body-loader {
+    top: 17%;
+  }
+
   .load {
-    top: 10%;
+    top: 8%;
     padding-bottom: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .body-loader {
+    top: 10%;
+    height: 118%;
   }
 }
 @media (min-width: 1024px) {
   .body-loader {
     top: 20%;
     padding-bottom: 40%;
+    height: 105%;
   }
   .body-loader .load {
     padding-bottom: 0;

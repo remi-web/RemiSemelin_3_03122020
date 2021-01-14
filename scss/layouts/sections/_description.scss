@@ -10,8 +10,6 @@
         @include police($police-bold);
         font-size: 1.3em;
     }
-    
-
 
     &-p{
 	    width: 90%;
@@ -27,10 +25,6 @@
             @include police ($police-bold);
         }
     }
-
-   
-    
-    
 }
 
 @media (min-width:600px){
@@ -71,9 +65,11 @@
         p:nth-child(2n){
             font-size: 1.2em;
         }
+
         &-explor{
             width: initial;
             height: 2em;
+            
             p{
                 font-size: 1em;
             }

@@ -3,25 +3,24 @@
     padding-top: 30px;
     width: 100%;
 
-    h3{
-        margin-left: 20px;
-        @include police ($police-bold);
-        font-size: 1.3em;
-    }
-    .step{
-        text-align: -webkit-center;
-
-    a{
-        text-decoration: dashed;
-        //text-align: center;
-        text-align: -moz-center;
-       // text-align: -webkit-center;
-        color: black;
-
-        :hover{
-            background-color: #f7ebff;
+        h3{
+            margin-left: 20px;
+            @include police ($police-bold);
+            font-size: 1.3em;
         }
-    }}
+        .step{
+            text-align: -webkit-center;
+
+        a{
+            text-decoration: dashed;
+            text-align: -moz-center;
+            color: black;
+
+            :hover{
+                background-color: #f7ebff;
+            }
+       }
+    }   
 }
 .step{
 
@@ -58,8 +57,6 @@
         @include police ($police);
         font-size: 0.9em;
     }
-
-   
 }
 
 @media (min-width:600px){
@@ -69,11 +66,11 @@
         position: relative;
         justify-content: space-around;
 
-            h3{
-                position: absolute;
-                bottom: 90%;
-                font-size: 1.4em;
-            }
+        h3{
+            position: absolute;
+            bottom: 90%;
+            font-size: 1.4em;
+        }
 
         .step{
             width: 25%;
