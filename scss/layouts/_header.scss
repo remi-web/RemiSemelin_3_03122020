@@ -86,6 +86,21 @@ header{
 }
 
 @media (min-width:1024px){
+    html{
+
+        header{
+
+            .logo{
+                width: 20%;
+                padding-top: 3%;
+                padding-bottom: 3%;
+            }
+
+            .header-logo{
+                padding-bottom: 0%;
+            }
+        }
+    }
     #locate{
         justify-content: center;
         form{
@@ -95,11 +110,20 @@ header{
 }
 
 @media (min-width:1300px){
-    header{
+    html{
+
+    
+        header{
+
+            .logo{
+                width: 15%;
+            }
+        }
 
         .header-logo{
             margin-left: 5%;
             margin-right: 5%;
+     
         }
 
         #locate{

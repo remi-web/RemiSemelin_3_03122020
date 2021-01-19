@@ -13,6 +13,7 @@
     
 @mixin txt-button-pink{
     @include police ($police-bold);
+    color: white;
 }
 
 @mixin button-pink {
@@ -143,8 +144,8 @@
 //----------surlignage vert---------//
 
 @mixin underline {
-    border: solid;
-    border-width: 2px;
+    border-bottom: solid;
+    border-width: 4px;
     border-color: $tertiaire;
     width: 8%
     

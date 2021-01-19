@@ -26,6 +26,11 @@ a{
 
             &-icon{
                 width: 50%;
+                opacity: 1;
+                
+                &:hover{
+                    opacity: 0;
+                }
             }
 
             h4{
@@ -59,13 +64,6 @@ a{
                     bottom: 0%;
                     opacity: 0;
                     width: 52%;
-                }
-
-                &:hover{
-                    border: transparent;
-                    transition: border;
-                    transition-duration: 1s ;
-
                 }
 
                 &:hover::after{
@@ -160,16 +158,20 @@ a{
             h4{
                 font-size:1.3em;
             }
+
             p{
                 font-size: 1em;
             }
+
             &-img{
                 height: 150px;
             }
+
             &-new{
                 p{
                     font-size: 2em;
                 }
+
             }
         }
     }

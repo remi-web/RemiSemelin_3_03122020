@@ -76,10 +76,7 @@ body main h4 {
   }
 }
 
-a {
-  text-decoration: none;
-}
-a .command {
+.command {
   border-radius: 30px;
   color: white;
   background: #FF79DA;
@@ -95,10 +92,12 @@ a .command {
   text-decoration: dashed;
   border-style: none;
 }
-a .command p {
+.command a {
+  text-decoration: none;
   font-family: roboto;
   font-weight: bold;
   font-style: normal;
+  color: white;
 }
 
 @media (min-width: 500px) {
@@ -153,7 +152,7 @@ a .command p {
   body main h4:nth-child(6n) {
     left: 70%;
   }
-  body a .command {
+  body .command {
     position: absolute;
     width: 30%;
     bottom: 10%;
@@ -248,11 +247,8 @@ h4 {
   font-weight: normal;
   font-style: normal;
   font-size: 0.8em;
-}
-
-.underline {
-  border: solid;
-  border-width: 2px;
+  border-bottom: solid;
+  border-width: 4px;
   border-color: #99E2D0;
   width: 8%;
 }
@@ -323,7 +319,7 @@ h4 {
   transform: translateX(-290%);
   animation-name: check-icon;
   transform-origin: center;
-  animation-duration: 600ms;
+  animation-duration: 800ms;
   animation-fill-mode: backwards;
 }
 .card-list:hover .price {
@@ -423,6 +419,14 @@ h4 {
   }
 }
 @media (min-width: 600px) {
+  h4 {
+    border-bottom: solid;
+    border-width: 4px;
+    border-color: #99E2D0;
+    width: 8%;
+    width: 4%;
+  }
+
   .card {
     margin-left: 5%;
     width: 100%;
@@ -473,6 +477,14 @@ h4 {
   }
 }
 @media (min-width: 1300px) {
+  h4 {
+    border-bottom: solid;
+    border-width: 4px;
+    border-color: #99E2D0;
+    width: 8%;
+    width: 3%;
+  }
+
   .card {
     display: flex;
     margin-left: 0;
@@ -490,7 +502,7 @@ h4 {
     content: url("../../../images/icon/check-icon.svg");
   }
   .card-list:hover::after {
-    transform: translateX(-300%);
+    transform: translateX(-280%);
     animation-duration: 800ms;
   }
   @keyframes check-icon {
@@ -498,7 +510,7 @@ h4 {
       transform: translateX(0%) rotate(0deg);
     }
     100% {
-      transform: translateX(-300%) rotate(720deg);
+      transform: translateX(-280%) rotate(720deg);
     }
   }
   .card-list-txt p {

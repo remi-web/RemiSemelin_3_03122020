@@ -1,11 +1,7 @@
 h4{
     @include police ($police);
     font-size:0.8em;
-    
-}
-
-.underline{
-   @include underline;
+    @include underline
 }
 
 .card{
@@ -73,7 +69,7 @@ h4{
             transform:translateX(-290%);
             animation-name: check-icon;
             transform-origin: center;
-            animation-duration: 600ms;
+            animation-duration: 800ms;
             animation-fill-mode: backwards;
             } 
 
@@ -171,6 +167,10 @@ h4{
 }
 
 @media (min-width:600px){
+    h4{
+        @include underline;
+        width: 4%;
+    }
     
     .card{
         margin-left: 5%;
@@ -240,6 +240,10 @@ h4{
 }
 
 @media (min-width:1300px){
+    h4{
+        @include underline;
+        width: 3%;
+    }
 
     .card{
         display: flex;
@@ -260,13 +264,13 @@ h4{
             }
 
             &:hover::after{
-                transform: translateX(-300%);
+                transform: translateX(-280%);
                 animation-duration: 800ms;
             }
 
             @keyframes check-icon{
                 0% {transform: translateX(0%) rotate(0deg); }
-                100% {transform:translateX(-300%) rotate(720deg);}
+                100% {transform:translateX(-280%) rotate(720deg);}
             }
             
             &-txt{

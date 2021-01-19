@@ -101,6 +101,15 @@ header .logo {
   }
 }
 @media (min-width: 1024px) {
+  html header .logo {
+    width: 20%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  html header .header-logo {
+    padding-bottom: 0%;
+  }
+
   #locate {
     justify-content: center;
   }
@@ -109,17 +118,20 @@ header .logo {
   }
 }
 @media (min-width: 1300px) {
-  header .header-logo {
+  html header .logo {
+    width: 15%;
+  }
+  html .header-logo {
     margin-left: 5%;
     margin-right: 5%;
   }
-  header #locate {
+  html #locate {
     justify-content: center;
   }
-  header #locate form {
+  html #locate form {
     width: 50%;
   }
-  header #locate-icon {
+  html #locate-icon {
     width: 6%;
   }
 }
@@ -368,6 +380,10 @@ a .cards p, a .cards h4 {
 }
 a .cards-icon {
   width: 50%;
+  opacity: 1;
+}
+a .cards-icon:hover {
+  opacity: 0;
 }
 a .cards h4 {
   font-family: roboto;
@@ -411,11 +427,6 @@ a .cards .like-icon::after {
   bottom: 0%;
   opacity: 0;
   width: 52%;
-}
-a .cards .like-icon:hover {
-  border: transparent;
-  transition: border;
-  transition-duration: 1s;
 }
 a .cards .like-icon:hover::after {
   opacity: 1;
@@ -689,7 +700,7 @@ footer nav ul {
 }
 @media (min-width: 1024px) {
   .body-loader {
-    top: 20%;
+    top: 15%;
     padding-bottom: 40%;
     height: 105%;
   }
@@ -699,7 +710,7 @@ footer nav ul {
 }
 @media (min-width: 1300px) {
   .body-loader {
-    top: 30%;
+    top: 15%;
     padding-bottom: 25%;
   }
 }

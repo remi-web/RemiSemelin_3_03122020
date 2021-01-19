@@ -51,20 +51,16 @@ body{
     }
 }
 
+.command{
+     @include button-pink;
+    margin: auto;
+    margin-top: 30px;
+    text-decoration: dashed;
+    border-style: none;
 
-a{
-    text-decoration: none;
-
-    .command{
-        @include button-pink;
-        margin: auto;
-        margin-top: 30px;
-        text-decoration: dashed;
-        border-style: none;
-
-        p{
-            @include txt-button-pink;
-        }
+    a{
+        text-decoration: none;
+        @include txt-button-pink;
     }
 }
 
@@ -140,13 +136,12 @@ a{
             
         }
 
-        a{
-            .command{
-                position: absolute;
-                width: 30%;
-                bottom: 10%;
-                left: 35%;
-            }
+        .command{
+            position: absolute;
+            width: 30%;
+            bottom: 10%;
+            left: 35%;
         }
+        
     }
 }
