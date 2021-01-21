@@ -92,13 +92,14 @@ footer{
 
 @media (min-width:1300px){
     footer{
+        padding-bottom: 6%;
 
         .logo{
             width: 8%;
         }
 
         a{
-            font-size: 1.2em;
+            font-size: 0.8em;
         }
 
         nav{
@@ -107,7 +108,7 @@ footer{
                 ul{
                     li{
                         .icon{
-                            width: 8%;
+                            width: 6%;
 
                         }
                     }

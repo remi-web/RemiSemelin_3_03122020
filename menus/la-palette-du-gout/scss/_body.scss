@@ -18,13 +18,13 @@ body{
         #baner{
             @include flex-center;
             justify-content: space-around;
+            align-items: center;
         
             h3{
                 @include police ($police-bis);
                 font-size:1.7em;
                 opacity: 0;
                 animation: img-load 2s 1.5s forwards;
-                
             }
                 @keyframes img-load{
                     0%{ opacity:0;}
@@ -32,10 +32,36 @@ body{
                 }    
             
             #like-icon{
-               max-width: 6%;
-               opacity: 0;
-               animation: img-load 2s 1.5s forwards;
-            }
+                //max-width: 6%;
+                opacity: 0;
+                animation: img-load 2s 1.5s forwards;
+                position: relative;
+
+                img{
+                    width: 50%;
+
+                    &:hover{
+                        opacity: 0;
+                        transition: opacity;
+                        transition-duration: 1s;
+                    }
+                }
+
+                &::after{
+                    content: url("../../../images/icon/like/like-icon-color.svg");
+                    opacity: 0;
+                    position: absolute;
+                    right: 50%;
+                    width: 50%;
+                    z-index: -1;
+                }
+
+                &:hover::after{
+                    opacity: (1);
+                    transition: opacity;
+                    transition-duration: 1s;
+                }
+            }   
         }
 
         h4{
@@ -62,6 +88,11 @@ body{
         text-decoration: none;
         @include txt-button-pink;
     }
+
+    &:hover{
+        box-shadow: 4px 4px 12px gray;
+        background: $secondaire;
+    }
 }
 
 @media (min-width:500px){
@@ -77,7 +108,6 @@ body{
                 justify-content:center;
 
                 #like-icon{
-                    width: 3%;
                     margin-left: 5%;
                 }
             }
@@ -104,9 +134,9 @@ body{
 
             #baner{
                 position: absolute;
+                width: 100%;
      
                 #like-icon{
-                    width: 8%;
                     max-width: initial;
                 }
             }
@@ -141,6 +171,7 @@ body{
             width: 30%;
             bottom: 10%;
             left: 35%;
+            
         }
         
     }

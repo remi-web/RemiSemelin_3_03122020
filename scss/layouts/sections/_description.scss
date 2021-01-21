@@ -15,14 +15,23 @@
 	    width: 90%;
 	    text-align: center;
         @include police ($police);
-        //color: grey;}
     }
+
+    
 
     &-explor{
         @include button-pink;
-        p{
-            font-size: 0.8em;
+        
+        a{
             @include police ($police-bold);
+            color: white;
+            text-decoration: none;
+            font-size: 0.8em;
+        }
+
+        &:hover{
+            box-shadow: 4px 4px 12px gray;
+            background: $secondaire;
         }
     }
 }
@@ -73,6 +82,7 @@
             p{
                 font-size: 1em;
             }
+            
         }
     }
 
